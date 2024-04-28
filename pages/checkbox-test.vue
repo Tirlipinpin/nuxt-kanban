@@ -25,10 +25,11 @@
   <button @click="console.log(checkboxesById)">Get result</button>
 </template>
 
-<script setup>
-const checkboxIds = ref([1, 2, 3, 4, 5])
+<script setup lang="ts">
+type Checkboxes = Record<number, { label: string, checked: boolean }>
 
-const checkboxesById = ref({
+const checkboxIds = ref<number[]>([1, 2, 3, 4, 5])
+const checkboxesById = ref<Checkboxes>({
   1: { label: 'Mail 1', checked: false },
   2: { label: 'Mail 2', checked: false },
   3: { label: 'Mail 3', checked: false },
@@ -37,10 +38,10 @@ const checkboxesById = ref({
   6: { label: 'Mail 6', checked: false }
 })
 
-function handleCheckAll(e) {
+function handleCheckAll(e: Event) {
   checkboxesById.value = checkboxIds.value?.reduce((acc, checkboxId) => ({
     ...acc,
-    [checkboxId]: { ...checkboxesById.value[checkboxId], checked: e.target.checked }
+    [checkboxId]: { ...checkboxesById.value[checkboxId], checked: (e.target as HTMLInputElement).checked }
   }), {})
 }
 </script>
