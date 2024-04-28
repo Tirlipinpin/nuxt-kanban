@@ -1,28 +1,22 @@
 <template>
-  <div style="
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  ">
+  <div id="checkbox-page">
+    <div>
+      <label>Select everything</label>
+      <input
+        type="checkbox"
+        @change="handleCheckAll"
+      />
+    </div>
 
-  <div>
-    <label>Select everything</label>
-    <input
+    <div v-for="checkboxId in checkboxIds">
+      <label>{{ checkboxesById[checkboxId]?.label }}</label>
+      <input
       type="checkbox"
-      @change="handleCheckAll"
-    />
+      v-model="checkboxesById[checkboxId].checked"
+      />
+    </div>
+    <button @click="console.log(checkboxesById)">Get result</button>
   </div>
-
-  <div v-for="checkboxId in checkboxIds">
-    <label>{{ checkboxesById[checkboxId]?.label }}</label>
-    <input
-     type="checkbox"
-     v-model="checkboxesById[checkboxId].checked"
-    />
-  </div>
-  </div>
-
-  <button @click="console.log(checkboxesById)">Get result</button>
 </template>
 
 <script setup lang="ts">
@@ -45,3 +39,11 @@ function handleCheckAll(e: Event) {
   }), {})
 }
 </script>
+
+<style scoped>
+#checkbox-page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+</style>
