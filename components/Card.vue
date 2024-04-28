@@ -16,6 +16,7 @@ const { entityId } = defineProps<Props>()
 
 <style scoped lang="scss">
 .card {
+  user-select: none;
   padding: 8px;;
 
   border-radius: 8px;
