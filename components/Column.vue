@@ -1,9 +1,10 @@
 <template>
   <div class="column">
     <div class="header">{{ kanbanStore.columnsById[columnId].label }}</div>
-    <div class="cardsContainer">
+    <div class="cardsContainer" ref="parentRef">
       <Card
-        v-for="entityId in kanbanStore.columnsById[columnId].entityIds"
+        v-for="entityId in entityIds"
+        :key="entityId"
         class="card"
         :entityId="entityId"
       />
@@ -12,6 +13,7 @@
 </template>
 
 <script setup lang="ts">
+import { useDragAndDrop } from "@formkit/drag-and-drop/vue";
 import { kanbanStore } from '~/store/kanban-store';
 
 interface Props {
@@ -19,6 +21,8 @@ interface Props {
 }
 
 const { columnId } = defineProps<Props>()
+
+const [parentRef, entityIds] = useDragAndDrop(kanbanStore.columnsById[columnId].entityIds, { group: 'kanban' })
 </script>
 
 <style scoped lang="scss">

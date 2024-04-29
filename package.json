@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/drag-and-drop": "^0.0.38",
     "nuxt": "^3.11.2",
     "sass": "^1.75.0",
     "vue": "^3.4.21",
