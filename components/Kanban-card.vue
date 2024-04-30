@@ -1,5 +1,9 @@
 <template>
-  <div class="card" :style="{ borderColor: kanbanStore.entitiesById[entityId].color}">
+  <div
+   class="card"
+    :style="{ borderColor: kanbanStore.entitiesById[entityId].color}"
+    @click="handleClick"
+    >
     {{ kanbanStore.entitiesById[entityId].title }}
   </div>
 </template>
@@ -12,6 +16,10 @@ interface Props {
 }
 
 const { entityId } = defineProps<Props>()
+
+function handleClick() {
+  kanbanStore.openEntityCard(entityId)
+}
 </script>
 
 <style scoped lang="scss">

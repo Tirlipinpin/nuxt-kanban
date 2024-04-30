@@ -4,6 +4,7 @@
       v-for="columnId in kanbanStore.columnIds"
       :columnId="columnId"
     />
+    <Card />
   </div>
 
   <div v-if="!kanbanStore.isLoaded" id="loading">

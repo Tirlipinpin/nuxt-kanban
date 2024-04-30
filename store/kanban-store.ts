@@ -13,8 +13,11 @@ interface KanbanStore {
   columnsById: Record<number, Column>
   entitiesById: Record<number, Entity>
   isLoaded: boolean
+  displayedEntityId: number | null
 
   fetchKanban: () => void
+  openEntityCard: (entityId: number) => void
+  closeEntityCard: () => void
 }
 
 export const kanbanStore = reactive<KanbanStore>({
@@ -22,6 +25,7 @@ export const kanbanStore = reactive<KanbanStore>({
   columnsById: {},
   entitiesById: {},
   isLoaded: false,
+  displayedEntityId: null,
 
   async fetchKanban() {
     const promise = new Promise((resolve) => {
@@ -53,5 +57,14 @@ export const kanbanStore = reactive<KanbanStore>({
     }
 
     this.isLoaded = true
+  },
+
+  openEntityCard(entityId: number) {
+    console.log("setting the entityid", entityId)
+    this.displayedEntityId = entityId
+  },
+
+  closeEntityCard() {
+    this.displayedEntityId = null
   }
 })
