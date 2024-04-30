@@ -30,6 +30,8 @@ kanbanStore.fetchKanban()
   gap: 8px;
 
   overflow-x: auto;
+
+  padding: 8px;
 }
 
 #loading {

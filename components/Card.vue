@@ -1,13 +1,18 @@
 <template>
-  <Teleport to="body" v-if="kanbanStore.displayedEntityId !== null">
+  <Teleport to="#root" v-if="kanbanStore.displayedEntityId !== null">
     <div class="card-overlay" @click="kanbanStore.closeEntityCard">
       <div
         class="card"
         @click="handleCardClick"
-        :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
       >
-        <div class="card-header">
+        <div
+          class="card-header"
+          :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
+         >
           {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
+        </div>
+        <div class="card-body">
+          This is a body
         </div>
       </div>
     </div>
@@ -40,17 +45,29 @@ function handleCardClick(e: Event) {
 .card {
   width: 100%;
   margin: 3rem;
-  padding: 2rem;
+  align-self: stretch;
 
   border-radius: 8px;
   background-color: white;
-
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-  border-top: 3px solid;
+  display: flex;
+  flex-direction: column;
 
   .card-header {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    flex-basis: 40px;
+    flex-shrink: 0;
+
+    padding: 0.5rem 1rem;
+
+    border-bottom: 4px solid;
+  }
+
+  .card-body {
+    flex-grow: 1;
+
+    padding: 0.5rem 1rem;
   }
 }
 </style>

@@ -8,9 +8,8 @@
 #root {
   height: 100vh;
   width: 100vw;
+  position: relative;
   
   display: flex;
-  
-  padding: 8px;
 }
 </style>

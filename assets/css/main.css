@@ -1,7 +1,6 @@
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 
   overflow: hidden;
 }
@@ -16,4 +15,5 @@ body {
 
 * {
   font-family: 'NotoSans', sans-serif;
+  box-sizing: border-box;
 }
