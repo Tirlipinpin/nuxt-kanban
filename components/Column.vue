@@ -2,7 +2,7 @@
   <div class="column">
     <div class="header">{{ kanbanStore.columnsById[columnId].label }}</div>
     <div class="cardsContainer" ref="parentRef">
-      <Card
+      <KanbanCard
         v-for="entityId in entityIds"
         :key="entityId"
         class="card"
