@@ -60,7 +60,6 @@ export const kanbanStore = reactive<KanbanStore>({
   },
 
   openEntityCard(entityId: number) {
-    console.log("setting the entityid", entityId)
     this.displayedEntityId = entityId
   },
 

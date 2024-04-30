@@ -1,22 +1,29 @@
 <template>
-  <Teleport to="#root" v-if="kanbanStore.displayedEntityId !== null">
-    <div class="card-overlay" @click="kanbanStore.closeEntityCard">
+  <Teleport to="#root">
+    <Transition>
       <div
-        class="card"
-        @click="handleCardClick"
+        class="card-overlay"
+        @click="kanbanStore.closeEntityCard"
+        v-if="kanbanStore.displayedEntityId !== null"
       >
         <div
-          class="card-header"
-          :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
-         >
-          {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
-        </div>
-        <div class="card-body">
-          This is a body
+          class="card"
+          @click="handleCardClick"
+        >
+          <div
+            class="card-header"
+            :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
+          >
+            {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
+            <FlatButton @click="kanbanStore.closeEntityCard">╳</FlatButton>
+          </div>
+          <div class="card-body">
+            This is a body
+          </div>
         </div>
       </div>
-    </div>
-  </Teleport>
+    </Transition>
+    </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -28,6 +35,16 @@ function handleCardClick(e: Event) {
 </script>
 
 <style scoped lang="scss">
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 250ms ease-in-out, backdrop-filter 250ms ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 .card-overlay {
   position: absolute;
   top: 0;
@@ -62,6 +79,9 @@ function handleCardClick(e: Event) {
     padding: 0.5rem 1rem;
 
     border-bottom: 4px solid;
+
+    display: flex;
+    justify-content: space-between;
   }
 
   .card-body {
