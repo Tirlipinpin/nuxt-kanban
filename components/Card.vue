@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" :style="{ borderColor: kanbanStore.entitiesById[entityId].color}">
     {{ kanbanStore.entitiesById[entityId].title }}
   </div>
 </template>
@@ -27,6 +27,8 @@ const { entityId } = defineProps<Props>()
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
   cursor: grab;
+
+  border-inline-start: 3px solid;
 
   &:active {
     cursor: grabbing;

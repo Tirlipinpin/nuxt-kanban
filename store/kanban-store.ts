@@ -5,6 +5,7 @@ interface Column {
 
 interface Entity {
   title: string
+  color: string
 }
 
 interface KanbanStore {
@@ -39,16 +40,16 @@ export const kanbanStore = reactive<KanbanStore>({
       6: { label: 'Done', entityIds: [10] }
     }
     this.entitiesById = {
-      1: { title: "Polish UI" },
-      2: { title: "Create some bullshit mocked data" },
-      3: { title: "Look up a good state management system" },
-      4: { title: "Take a break" },
-      5: { title: "Try out mutation system" },
-      6: { title: "Read some docs..." },
-      7: { title: "Create second page" },
-      8: { title: "Create first page" },
-      9: { title: "Init git repository" },
-      10: { title: "Create project" },
+      1: { title: "Polish UI", color: '#874CCC' },
+      2: { title: "Create some bullshit mocked data", color: '#F8CB2E' },
+      3: { title: "Look up a good state management system", color: '#EE5007' },
+      4: { title: "Take a break", color: '#EE5007' },
+      5: { title: "Try out mutation system", color: '#874CCC' },
+      6: { title: "Read some docs...", color: '#B22727' },
+      7: { title: "Create second page", color: '#F8CB2E' },
+      8: { title: "Create first page", color: '#874CCC' },
+      9: { title: "Init git repository", color: '#EE5007' },
+      10: { title: "Create project", color: '#EE5007' },
     }
 
     this.isLoaded = true
