@@ -1,23 +1,17 @@
 <template>
   <LexicalComposer :initial-config="config">
-    <LexicalPlainTextPlugin>
+    <LexicalRichTextPlugin style="position: absolute;">
       <template #contentEditable>
-        <LexicalContentEditable />
+        <LexicalContentEditable class="whiteboard" />
       </template>
-      <template #placeholder>
-        <div>
-          Enter some text...
-        </div>
-      </template>
-    </LexicalPlainTextPlugin>
+    </LexicalRichTextPlugin>
     <LexicalHistoryPlugin />
   </LexicalComposer>
 </template>
 
 <script setup lang="ts">
-import { $getRoot, $getSelection, type CreateEditorArgs } from 'lexical'
-import { LexicalComposer, LexicalContentEditable, LexicalHistoryPlugin, LexicalPlainTextPlugin } from 'lexical-vue'
-import type { Exception } from 'sass';
+import { type CreateEditorArgs } from 'lexical'
+import { LexicalComposer, LexicalContentEditable, LexicalHistoryPlugin, LexicalRichTextPlugin } from 'lexical-vue'
 
 interface Props {
   content: string
@@ -36,9 +30,11 @@ const config: CreateEditorArgs = {
     // try to recover gracefully without losing user data.
     console.error(error)
   },
-
 }
 </script>
 
 <style scoped lang="scss">
+.whiteboard {
+  flex-grow: 1;
+}
 </style>
