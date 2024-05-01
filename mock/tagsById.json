@@ -1,0 +1,26 @@
+{
+  "1": {
+    "title": "Bug",
+    "color": "#ffadad"
+  },
+  "2": {
+    "title": "New feature",
+    "color": "#caffbf"
+  },
+  "3": {
+    "title": "Dev techno",
+    "color": "#ffc6ff"
+  },
+  "4": {
+    "title": "UI",
+    "color": "#fdffb6"
+  },
+  "5": {
+    "title": "Customer",
+    "color": "#a0c4ff"
+  },
+  "6": {
+    "title": "Internal",
+    "color": "#9bf6ff"
+  }
+}

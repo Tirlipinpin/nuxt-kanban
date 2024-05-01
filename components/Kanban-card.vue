@@ -1,18 +1,28 @@
 <template>
   <div
-   class="card"
+    class="card"
     :style="{ borderColor: kanbanStore.entitiesById[entityId].color}"
     @click="handleClick"
-    >
+  >
     {{ kanbanStore.entitiesById[entityId].title }}
+    <div class="tags-list">
+      <Tag
+        v-for="tagId in kanbanStore.entitiesById[entityId].tagIds"
+        class="tag"
+        :color="kanbanStore.tagsById[tagId].color"
+       >
+        {{ kanbanStore.tagsById[tagId].title }}
+    </Tag>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { kanbanStore } from '~/store/kanban-store';
 
+
 interface Props {
-  entityId: number
+  entityId: string
 }
 
 const { entityId } = defineProps<Props>()
@@ -38,12 +48,27 @@ function handleClick() {
 
   border-inline-start: 3px solid;
 
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 4px;
+
+  overflow: hidden;
+
   &:active {
     cursor: grabbing;
   }
 
   &:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  .tags-list {
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
   }
 }
 </style>

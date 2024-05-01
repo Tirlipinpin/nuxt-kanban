@@ -1,0 +1,72 @@
+{
+  "1": {
+    "title": "Polish UI",
+    "color": "#874CCC",
+    "tagIds": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "2": {
+    "title": "Create some bullshit mocked data",
+    "color": "#F8CB2E",
+    "tagIds": []
+  },
+  "3": {
+    "title": "Look up a good state management system",
+    "color": "#EE5007",
+    "tagIds": [
+      "3"
+    ]
+  },
+  "4": {
+    "title": "Take a break",
+    "color": "#EE5007",
+    "tagIds": [
+      "4",
+      "5"
+    ]
+  },
+  "5": {
+    "title": "Try out mutation system",
+    "color": "#874CCC",
+    "tagIds": []
+  },
+  "6": {
+    "title": "Read some docs...",
+    "color": "#B22727",
+    "tagIds": [
+      "1"
+    ]
+  },
+  "7": {
+    "title": "Create second page",
+    "color": "#F8CB2E",
+    "tagIds": [
+      "1",
+      "6"
+    ]
+  },
+  "8": {
+    "title": "Create first page",
+    "color": "#874CCC",
+    "tagIds": [
+      "6"
+    ]
+  },
+  "9": {
+    "title": "Init git repository",
+    "color": "#EE5007",
+    "tagIds": []
+  },
+  "10": {
+    "title": "Create project",
+    "color": "#EE5007",
+    "tagIds": [
+      "3",
+      "5"
+    ]
+  }
+}

@@ -17,7 +17,7 @@ import { useDragAndDrop } from "@formkit/drag-and-drop/vue";
 import { kanbanStore } from '~/store/kanban-store';
 
 interface Props {
-  columnId: number
+  columnId: string
 }
 
 const { columnId } = defineProps<Props>()

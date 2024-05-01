@@ -32,10 +32,6 @@ import { kanbanStore } from '~/store/kanban-store';
 function handleCardClick(e: Event) {
   e.stopPropagation()
 }
-
-function handleClose() {
-  console.log('yo yo yo', kanbanStore.closeEntityCard)
-}
 </script>
 
 <style scoped lang="scss">
