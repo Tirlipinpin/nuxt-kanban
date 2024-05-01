@@ -17,7 +17,7 @@
             <FlatButton @click="kanbanStore.closeEntityCard()">╳</FlatButton>
           </div>
           <div class="card-body">
-            This is a body
+            <CardBlocks />
           </div>
         </div>
       </div>
