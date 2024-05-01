@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@formkit/drag-and-drop": "^0.0.38",
+    "lexical": "^0.14.5",
+    "lexical-vue": "^0.8.3",
     "nuxt": "^3.11.2",
     "sass": "^1.75.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "yjs": "^13.6.15"
   }
 }

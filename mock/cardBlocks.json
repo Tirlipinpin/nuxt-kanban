@@ -1,0 +1,53 @@
+[
+  {
+    "type": "form",
+    "fields": [
+      {
+        "type": "text",
+        "label": "Summary",
+        "value": "This is just a summary"
+      },
+      {
+        "type": "number",
+        "label": "Complexity",
+        "value": 3
+      },
+      {
+        "type": "select",
+        "label": "Owner",
+        "value": "John Doe"
+      },
+      {
+        "type": "select",
+        "label": "Reviewer",
+        "value": "Jane Doe"
+      },
+      {
+        "type": "enum",
+        "label": "Priority",
+        "value": "C1"
+      }
+    ],
+    "title": "Detail"
+  },
+  {
+    "type": "whiteboard",
+    "content": "",
+    "title": "Product specs"
+  },
+  {
+    "type": "attachments",
+    "attachments": [],
+    "title": "Documents"
+  },
+  {
+    "type": "social",
+    "messages": [],
+    "title": "Messages"
+  },
+  {
+    "type": "whiteboard",
+    "content": "",
+    "title": "Backlog"
+  }
+]

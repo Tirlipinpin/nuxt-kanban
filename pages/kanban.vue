@@ -20,13 +20,11 @@ kanbanStore.fetchKanban()
 
 <style scoped>
 #kanban {
-  display: grid;
-
   flex-grow: 1;
-
+  
+  display: grid;
   grid-auto-columns: 250px;
   grid-auto-flow: column;
-
   gap: 8px;
 
   overflow-x: auto;

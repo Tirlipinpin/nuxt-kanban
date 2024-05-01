@@ -12,6 +12,7 @@
         >
           <div
             class="card-header"
+            :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId]?.color }"
           >
             {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
             <FlatButton @click="kanbanStore.closeEntityCard()">╳</FlatButton>
@@ -70,13 +71,16 @@ function handleCardClick(e: Event) {
   display: flex;
   flex-direction: column;
 
+  overflow: hidden;
+
   .card-header {
     font-size: 1.2rem;
     flex-basis: 40px;
     flex-shrink: 0;
-    border-bottom: v-bind("kanbanStore.entitiesById[kanbanStore.displayedEntityId ?? '']?.color") 5px solid;
+    border-bottom: 4px solid;
+    background-color: #fbfbfb;
 
-    padding: 0.5rem 1rem;
+    padding: 8px;
 
     display: flex;
     justify-content: space-between;
@@ -84,8 +88,9 @@ function handleCardClick(e: Event) {
 
   .card-body {
     flex-grow: 1;
+    display: flex;
 
-    padding: 0.5rem 1rem;
+    padding: 8px;
   }
 }
 </style>
