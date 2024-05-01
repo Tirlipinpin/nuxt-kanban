@@ -15,7 +15,7 @@
             :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
           >
             {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
-            <FlatButton @click="kanbanStore.closeEntityCard">╳</FlatButton>
+            <FlatButton @click="kanbanStore.closeEntityCard()">╳</FlatButton>
           </div>
           <div class="card-body">
             This is a body
@@ -31,6 +31,10 @@ import { kanbanStore } from '~/store/kanban-store';
 
 function handleCardClick(e: Event) {
   e.stopPropagation()
+}
+
+function handleClose() {
+  console.log('yo yo yo', kanbanStore.closeEntityCard)
 }
 </script>
 
