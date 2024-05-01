@@ -12,7 +12,6 @@
         >
           <div
             class="card-header"
-            :style="{ borderColor: kanbanStore.entitiesById[kanbanStore.displayedEntityId].color }"
           >
             {{ kanbanStore.entitiesById[kanbanStore.displayedEntityId].title }}
             <FlatButton @click="kanbanStore.closeEntityCard()">╳</FlatButton>
@@ -75,10 +74,9 @@ function handleCardClick(e: Event) {
     font-size: 1.2rem;
     flex-basis: 40px;
     flex-shrink: 0;
+    border-bottom: v-bind("kanbanStore.entitiesById[kanbanStore.displayedEntityId ?? '']?.color") 5px solid;
 
     padding: 0.5rem 1rem;
-
-    border-bottom: 4px solid;
 
     display: flex;
     justify-content: space-between;

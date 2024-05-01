@@ -1,7 +1,6 @@
 <template>
   <div
     class="card"
-    :style="{ borderColor: kanbanStore.entitiesById[entityId].color}"
     @click="handleClick"
   >
     {{ kanbanStore.entitiesById[entityId].title }}
@@ -38,6 +37,7 @@ function handleClick() {
   padding: 8px;
 
   border-radius: 8px;
+  border-inline-start: v-bind("kanbanStore.entitiesById[entityId].color") 3px solid;
 
   background-color: white;
 
@@ -45,8 +45,6 @@ function handleClick() {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
   cursor: pointer;
-
-  border-inline-start: 3px solid;
 
   display: flex;
   flex-direction: column;

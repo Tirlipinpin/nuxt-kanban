@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="tag"
-    :style="{ backgroundColor: color }"
-  >
+  <div class="tag">
     <slot />
   </div>
 </template>
@@ -22,5 +19,8 @@ const { color } = defineProps<Props>()
   text-wrap: nowrap;
 
   font-size: .8rem;
+
+  background-color: v-bind("color");
+  color: rgba(0, 0, 0, .7);
 }
 </style>
