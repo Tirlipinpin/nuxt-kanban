@@ -37,7 +37,26 @@
   },
   {
     "type": "attachments",
-    "attachments": [],
+    "attachments": [
+      {
+        "id": "123",
+        "title": "Scotland trip cover",
+        "size": "30Ko",
+        "type": "image/jpg"
+      },
+      {
+        "id": "456",
+        "title": "Mobydick",
+        "size": "2Mo",
+        "type": "text/text"
+      },
+      {
+        "id": "789",
+        "title": "Gohan goes ssj2",
+        "size": "678Ko",
+        "type": "image/jpg"
+      }
+    ],
     "title": "Documents"
   },
   {

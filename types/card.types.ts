@@ -27,6 +27,7 @@ export interface Attachment {
   id: string
   title: string
   size: string
+  type: string
 }
 
 export interface AttachmentsBlock {

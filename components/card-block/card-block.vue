@@ -9,9 +9,10 @@
       v-if="cardBlock.type === 'whiteboard'"
       :content="cardBlock.content"
     />
-    <div v-if="cardBlock.type === 'attachments'">
-      This is an attachment block
-    </div>
+    <AttachmentsBlock
+      v-if="cardBlock.type === 'attachments'"
+      :attachments="cardBlock.attachments"
+    />
     <div v-if="cardBlock.type === 'social'">
       This is a social block
     </div>
@@ -22,6 +23,7 @@
 import { type CardBlock } from '~/types/card.types';
 import FormBlock from './form-block.vue';
 import WhiteboardBlock from './whiteboard-block.vue';
+import AttachmentsBlock from './attachments-block.vue';
 
 interface Props {
   cardBlock: CardBlock
