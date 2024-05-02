@@ -2,15 +2,16 @@
   <div class="form-block">
     <div v-for="field in fields" class="field">
       <label>{{ field.label }}</label>
-      <input
+      <Input
         :type="field.type.toString() === 'text' ? 'text' : 'number'"
-        :value="field.value"
+        v-model="field.value"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import Input from '~/designSystem/input.vue';
 import type { Field } from '~/types/card.types';
 
 interface Props {
