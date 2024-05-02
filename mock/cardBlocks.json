@@ -61,7 +61,74 @@
   },
   {
     "type": "social",
-    "messages": [],
+    "messages": [
+      {
+        "content": "Please update the backlog for this ticket.",
+        "senderName": "The boss",
+        "senderId": "123",
+        "creationDate": "2024-04-29"
+      },
+      {
+        "content": "Please do not update the backlog for this ticket.",
+        "senderName": "The real boss",
+        "senderId": "456",
+        "creationDate": "2024-04-29"
+      },
+      {
+        "content": "It would be really helpful to prepare the sprint though.",
+        "senderName": "The boss",
+        "senderId": "123",
+        "creationDate": "2024-04-29"
+      },
+      {
+        "content": "You convinced me, we should update the backlog for this ticket.",
+        "senderName": "The boss",
+        "senderId": "456",
+        "creationDate": "2024-04-29"
+      },
+      {
+        "content": "Well this is great.",
+        "senderName": "The boss",
+        "senderId": "123",
+        "creationDate": "2024-04-29"
+      },
+      {
+        "content": "Should we really?",
+        "senderName": "Not a boss",
+        "senderId": "789",
+        "creationDate": "2024-05-02"
+      },
+      {
+        "content": "Well this is embarrassing, we agreed on doing it already...",
+        "senderName": "The boss",
+        "senderId": "123",
+        "creationDate": "2024-05-02"
+      },
+      {
+        "content": "It would be a bummer, I don't feel like taking decisions today.",
+        "senderName": "The real boss",
+        "senderId": "456",
+        "creationDate": "2024-05-02"
+      },
+      {
+        "content": "Well I really don't want to do it.",
+        "senderName": "Not a boss",
+        "senderId": "789",
+        "creationDate": "2024-05-02"
+      },
+      {
+        "content": "Oh, then don't do it.",
+        "senderName": "The boss",
+        "senderId": "123",
+        "creationDate": "2024-05-02"
+      },
+      {
+        "content": "Cool, I didn't have to take any decision.",
+        "senderName": "The boss",
+        "senderId": "456",
+        "creationDate": "2024-05-02"
+      }
+    ],
     "title": "Messages"
   },
   {

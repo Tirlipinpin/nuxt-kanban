@@ -91,6 +91,8 @@ function handleCardClick(e: Event) {
     display: flex;
 
     padding: 8px;
+
+    overflow: hidden;
   }
 }
 </style>

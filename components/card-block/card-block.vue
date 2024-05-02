@@ -13,9 +13,10 @@
       v-if="cardBlock.type === 'attachments'"
       :attachments="cardBlock.attachments"
     />
-    <div v-if="cardBlock.type === 'social'">
-      This is a social block
-    </div>
+    <SocialBlock
+      v-if="cardBlock.type === 'social'"
+      :messages="cardBlock.messages"
+    />
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import { type CardBlock } from '~/types/card.types';
 import FormBlock from './form-block.vue';
 import WhiteboardBlock from './whiteboard-block.vue';
 import AttachmentsBlock from './attachments-block.vue';
+import SocialBlock from './social-block.vue';
 
 interface Props {
   cardBlock: CardBlock
@@ -40,6 +42,8 @@ const { cardBlock } = defineProps<Props>()
 
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 
   .block-header {
     padding: 8px;

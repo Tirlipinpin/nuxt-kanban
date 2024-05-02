@@ -38,7 +38,8 @@ export interface AttachmentsBlock {
 
 export interface Message {
   content: string
-  sender: string
+  senderName: string
+  senderId: string
   creationDate: string
 }
 
