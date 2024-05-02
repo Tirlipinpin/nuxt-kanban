@@ -83,6 +83,7 @@ function handleCardClick(e: Event) {
     padding: 8px;
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
